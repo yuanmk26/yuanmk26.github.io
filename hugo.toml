@@ -22,13 +22,14 @@ home = ["HTML", "RSS", "JSON"]
 pagerSize = 10
 
 [params]
-colorScheme = "blowfish"
+colorScheme = "ocean"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 enableCodeCopy = true
 
 [params.author]
 name = "Yuan"
+image = "img/avatar.jpg"
 headline = "Signals, circuits, detectors, and the quiet work behind measurement."
 
 [params.homepage]
