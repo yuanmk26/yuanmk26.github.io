@@ -1,22 +1,69 @@
 baseURL = "https://yuanmk26.github.io/"
-languageCode = "zh-cn"
+locale = "zh-cn"
+defaultContentLanguage = "zh-cn"
 title = "Notes from Yuan's Bench"
-theme = "PaperMod"
+theme = "blowfish"
+
+[languages.en]
+disabled = true
+
+[languages.zh-cn]
+locale = "zh-cn"
+title = "Notes from Yuan's Bench"
+
+[languages.zh-cn.params]
+displayName = "简体中文"
+isoCode = "zh-CN"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
 
 [pagination]
 pagerSize = 10
 
 [params]
-defaultTheme = "auto"
-ShowReadingTime = true
-ShowBreadCrumbs = true
-ShowPostNavLinks = true
-ShowCodeCopyButtons = true
-ShowToc = true
+colorScheme = "blowfish"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+enableCodeCopy = true
 
-[params.homeInfoParams]
-Title = "Notes from Yuan's Bench"
-Content = "Signals, circuits, detectors, and the quiet work behind measurement."
+[params.author]
+name = "Yuan"
+headline = "Signals, circuits, detectors, and the quiet work behind measurement."
+
+[params.homepage]
+layout = "profile"
+showRecent = true
+showRecentItems = 5
+
+[params.article]
+showBreadcrumbs = true
+showPagination = true
+showReadingTime = true
+showTableOfContents = true
+
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+
+[markup.goldmark.parser.attribute]
+block = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\\[', '\\]'], ['$$', '$$']]
+inline = [['\\(', '\\)']]
+
+[markup.highlight]
+noClasses = false
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 4
 
 [[menu.main]]
 name = "Posts"
