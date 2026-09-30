@@ -1,0 +1,34 @@
+baseURL = "https://yuanmk26.github.io/"
+languageCode = "zh-cn"
+title = "Notes from Yuan's Bench"
+theme = "PaperMod"
+
+[pagination]
+pagerSize = 10
+
+[params]
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowBreadCrumbs = true
+ShowPostNavLinks = true
+ShowCodeCopyButtons = true
+ShowToc = true
+
+[params.homeInfoParams]
+Title = "Notes from Yuan's Bench"
+Content = "Signals, circuits, detectors, and the quiet work behind measurement."
+
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 30
