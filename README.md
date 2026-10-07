@@ -26,7 +26,7 @@
 需要先安装 Hugo extended 版（v0.166.0 或更高），然后克隆并拉取主题：
 
 ```bash
-git clone --recurse-submodules https://github.com/yuanmk26/yuan-bench.git
+git clone --recurse-submodules https://github.com/yuanmk26/yuanmk26.github.io.git
 cd yuan-bench
 hugo server -D
 ```
