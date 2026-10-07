@@ -22,7 +22,7 @@ data/  i18n/           预留目录，当前为空
 themes/                git submodule，不要直接改
   blowfish/            当前启用的主题
   PaperMod/            旧主题，已弃用，保留备用
-public/                 hugo 构建产物（部分被 git 跟踪，见下）
+public/                 hugo 构建产物（已被 .gitignore 忽略）
 resources/              Hugo 构建缓存（未跟踪）
 .github/workflows/hugo.yaml  GitHub Pages 自动构建与部署
 ```
@@ -48,8 +48,9 @@ Markdown 里可以直接写 HTML（`markup.goldmark.renderer.unsafe = true`）�
 - **不要直接修改 `themes/` 下的主题代码**。主题是 submodule，改动会在更新时丢失。
   覆盖主题行为请把对应文件放到项目根目录的 `layouts/`、`assets/` 或 `static/` 下。
 - 主题配置写在 `hugo.toml` 的 `[params.*]` 中，参考 `themes/blowfish/` 的文档与示例。
-- `public/` 里有早期提交遗留的构建产物被 git 跟踪，但 GitHub Actions 每次部署都会
-  重新构建整个目录。**不要手动编辑 `public/` 里的文件**——改源头（`content/`、
-  `hugo.toml`、`layouts/`、`assets/`）后重新构建。
+- **不要手动编辑 `public/` 里的文件**——它是构建产物，已被 `.gitignore` 忽略，
+  改源头（`content/`、`hugo.toml`、`layouts/`、`assets/`）后重新构建即可。
+  `resources/` 是 Hugo 的构建缓存，同样不跟踪。
 - 部署是自动的：推送到 `main` 分支即触发构建发布，无需手动操作。
-- 仓库目前没有 `.gitignore`，`resources/`、`.hugo_build.lock` 等构建产物处于未跟踪状态。
+- CI 在 `.github/workflows/hugo.yaml` 中把 Hugo 固定为 0.166.0，与 Blowfish
+  声明的兼容版本一致。本地若用更高版本会看到一条兼容性 WARN，通常无害。
